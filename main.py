@@ -1,17 +1,17 @@
-# Read CSV via pandas
-# Change both RPM and TPS to Arrays
-# Make a for loop
-# Run RPM and TPS through that loop, removing null values
+# Read CSV data and take Timestamp, RPM, and TPS
+# Convert timestamp to datetime
+# Remove NaN Values
+# Plot out RPM and TPS (x) against Datetime (y)
 # Take those values and graph it via Plotly
 
 import pandas as pd
 import plotly.express as px
-import datetime as dt
 
 # All Data
 data = pd.DataFrame(pd.read_csv("can_data.csv", usecols=['timestamp', 'RPM', 'TPS']))
-data['Time'] = pd.to_datetime(data['timestamp'], unit='s')
 
+# Convert timestamp to datetime
+data['Time'] = pd.to_datetime(data['timestamp'], unit='s')
 
 # Remove Null Values
 data = data.dropna();
