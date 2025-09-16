@@ -1,2 +1,0 @@
-rpmPlot.show()
-tpsPlot.show()
