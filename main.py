@@ -8,7 +8,7 @@ import pandas as pd
 import plotly.express as px
 
 # All Data
-data = pd.DataFrame(pd.read_csv("can_data.csv", usecols=['timestamp', 'RPM', 'TPS']))
+data = pd.read_csv("can_data.csv", usecols=['timestamp', 'RPM', 'TPS'])
 
 # Convert timestamp to datetime
 data['Time'] = pd.to_datetime(data['timestamp'], unit='s')
